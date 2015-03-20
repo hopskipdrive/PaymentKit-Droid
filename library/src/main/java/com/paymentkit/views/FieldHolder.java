@@ -194,7 +194,7 @@ public class FieldHolder extends RelativeLayout {
 		mExpirationEditText.requestFocus();
 	}
 
-    protected void transitionToCardNumField() {
+    public void transitionToCardNumField() {
         mCardIcon.flipTo(CardFace.FRONT);
         AnimatorSet set = new AnimatorSet();
 
