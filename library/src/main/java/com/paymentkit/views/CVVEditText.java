@@ -128,7 +128,7 @@ public class CVVEditText extends EditText {
                 }
             }
             // soft-keyboard uses downs while hard uses ups.
-            return shouldConsume || event.getAction() == KeyEvent.ACTION_UP;
+            return shouldConsume || (keyCode != KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_UP);
         }
     }
 
