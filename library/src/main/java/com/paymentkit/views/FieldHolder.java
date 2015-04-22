@@ -242,7 +242,7 @@ public class FieldHolder extends RelativeLayout {
     }
 
     public interface OnCardValidListener {
-        public void cardIsValid();
+        public void cardIsValid(boolean enterPressed);
     }
 	
 	protected interface CardEntryListener {
@@ -256,7 +256,7 @@ public class FieldHolder extends RelativeLayout {
 
 		void onCVVEntry();
 
-		void onCVVEntryComplete();
+		void onCVVEntryComplete(boolean enterPressed);
 
 		void onBackFromCVV();
 
@@ -304,10 +304,10 @@ public class FieldHolder extends RelativeLayout {
 		}
 
 		@Override
-		public void onCVVEntryComplete() {
+		public void onCVVEntryComplete(boolean enterPressed) {
             if (!focusOnInvalidField()) {
                 mCardIcon.flipTo(CardFace.FRONT);
-                if (mCardValidListener != null) mCardValidListener.cardIsValid();
+                if (mCardValidListener != null) mCardValidListener.cardIsValid(enterPressed);
                 // complete
             }
 		}

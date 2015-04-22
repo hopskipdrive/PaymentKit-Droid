@@ -78,7 +78,7 @@ public class CVVEditText extends EditText {
         @Override
         public void afterTextChanged(Editable s) {
             if (s.length() == cvvMaxLength) {
-                mListener.onCVVEntryComplete();
+                mListener.onCVVEntryComplete(false);
             }
         }
 
@@ -162,7 +162,7 @@ public class CVVEditText extends EditText {
             switch (editorAction) {
                 case EditorInfo.IME_ACTION_DONE:
                     shouldConsume = true;
-                    mListener.onCVVEntryComplete();
+                    mListener.onCVVEntryComplete(true);
             }
             return shouldConsume ? true : super.performEditorAction(editorAction);
         }
@@ -183,7 +183,7 @@ public class CVVEditText extends EditText {
 		}
 
         private boolean handleNextPress() {
-            mListener.onCVVEntryComplete();
+            mListener.onCVVEntryComplete(true);
             return true;
         }
 
