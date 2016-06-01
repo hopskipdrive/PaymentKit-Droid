@@ -41,6 +41,8 @@
             android:inputType="number"
             android:maxLength="5"
             android:textSize="@dimen/pk_checkout_input_field_text_size"
+            android:textColor="#556365"
+            android:textColorHint="#879EA1"
             android:color="@color/pk_DKGRAY" />
 
         <com.paymentkit.views.CVVEditText
@@ -57,6 +59,8 @@
             android:maxLength="3"
             android:nextFocusRight="@null"
             android:textSize="@dimen/pk_checkout_input_field_text_size"
+            android:textColor="#556365"
+            android:textColorHint="#879EA1"
             android:color="@color/pk_DKGRAY" />
     </LinearLayout>
 
