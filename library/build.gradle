@@ -21,14 +21,6 @@ android {
         staging {}
         debug {}
     }
-
-    flavorDimensions "hsdFlavor"
-
-    productFlavors {
-        mainFlavor {
-            dimension "hsdFlavor"
-        }
-    }
 }
 
 dependencies {
