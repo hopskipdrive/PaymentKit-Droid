@@ -3,10 +3,11 @@ apply plugin: 'com.android.library'
 android {
     compileSdkVersion Integer.parseInt(project.compileSdkVersion)
     buildToolsVersion project.buildToolsVersion
+    namespace 'com.paymentkit'
 
     defaultConfig {
-        minSdkVersion 8
-        targetSdkVersion 26
+        minSdkVersion Integer.parseInt(project.minSdkVersion)
+        targetSdkVersion Integer.parseInt(project.targetSdkVersion)
     }
 
     buildTypes {
@@ -21,6 +22,7 @@ android {
         staging {}
         debug {}
     }
+
 }
 
 dependencies {
